@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Website with Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main Content Area */
+        main {
+            display: flex;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Sidebar Styling */
+        aside {
+            width: 25%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        /* Section Styling */
+        section {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        /* Section headers (h1 to h6) */
+        section h1, section h2, section h3, section h4, section h5, section h6 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Sample Website</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#index">Index</a>
+        <a href="#section1">home</a>
+        <a href="#section2">payment</a>
+        <a href="#section3">Section 3</a>
+        <a href="#section4">Section 4</a>
+        <a href="#section5">Section 5</a>
+        <a href="#section6">Section 6</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Sidebar (Aside Section) -->
+        <aside>
+            <h2>Advertisement</h2>
+            <div class="ad">
+                <h3>Buy Our Product</h3>
+                <p>Special discount on all items! Get 50% off for the next 24 hours.</p>
+            </div>
+            <div class="ad">
+                <h3>Sponsored</h3>
+                <p>Learn to code in 30 days. Sign up for our course now!</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Section -->
+        <section id="index">
+            <h1>Index</h1>
+            <p>This is the index section. It serves as the introductory or home section of the website. You can add more content as needed here.</p>
+        </section>
+
+        <!-- Section 1 -->
+        <section id="section1">
+            <h2>Introduction</h2>
+            <p>This section provides an overview of the content. It explains what visitors can expect from the website.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <em>Donec viverra turpis</em> vitae tortor feugiat interdum.</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section2">
+            <h3>Details</h3>
+            <p>Here you will find the details about various topics discussed on the website.</p>
+            <p><strong>Note:</strong> The content is presented using both block-level and inline elements.</p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="section3">
+            <h4>Features</h4>
+            <ul>
+                <li>Feature A: Easy to use</li>
+                <li>Feature B: Responsive design</li>
+                <li>Feature C: Accessible navigation</li>
+            </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="section4">
+            <h5>Pricing</h5>
+            <p>We offer various pricing options for you to choose from:</p>
+            <p><strong>Basic Plan:</strong> $10/month</p>
+            <p><strong>Premium Plan:</strong> $20/month</p>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="section5">
+            <h6>Testimonials</h6>
+            <blockquote>
+                "This website is fantastic! It has everything I need. Highly recommend!"
+                <cite> - Happy User</cite>
+            </blockquote>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="section6">
+            <h1>Conclusion</h1>
+            <p>Thank you for visiting our website. We hope you found the information helpful!</p>
+            <p>Stay tuned for more updates in the future.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

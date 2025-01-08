@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing Page</title>
+    <style>
+        /* Basic Reset */
+        body, h1, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        header nav a:hover {
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        header .search-bar {
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        header .cart-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Sidebar and Main Layout */
+        .main-container {
+            display: flex;
+            margin-top: 60px;
+        }
+
+        /* Sidebar Filters */
+        .sidebar {
+            background-color: white;
+            padding: 20px;
+            width: 25%;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar select, .sidebar input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 10px;
+        }
+
+        .sidebar label {
+            font-weight: bold;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-grid .product {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .product .title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product .price {
+            color: green;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Pagination */
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .pagination button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .sidebar-dropdown {
+                display: block;
+                margin: 20px;
+            }
+
+            .sidebar-dropdown select {
+                width: 100%;
+                padding: 10px;
+            }
+
+            header nav {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo">MyShop</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </nav>
+    <input type="text" class="search-bar" placeholder="Search products...">
+    <div class="cart-icon">🛒</div>
+</header>
+
+<!-- Main Container -->
+<div class="main-container">
+
+    <!-- Sidebar Filters -->
+    <div class="sidebar">
+        <h3>Filters</h3>
+        <label for="category">Category</label>
+        <select id="category">
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="furniture">Furniture</option>
+        </select>
+
+        <label for="price">Price Range</label>
+        <input type="range" id="price" min="0" max="1000" step="50">
+
+        <label for="brand">Brand</label>
+        <select id="brand">
+            <option value="all">All Brands</option>
+            <option value="brand1">Brand 1</option>
+            <option value="brand2">Brand 2</option>
+        </select>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 1">
+            <div class="title">Product 1</div>
+            <div class="price">$99.99</div>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 2">
+            <div class="title">Product 2</div>
+            <div class="price">$79.99</div>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 3">
+            <div class="title">Product 3</div>
+            <div class="price">$199.99</div>
+            <button>Add to Cart</button>
+        </div>
+        <!-- Add more products as needed -->
+    </div>
+</div>
+
+<!-- Pagination -->
+<div class="pagination">
+    <button>&laquo; Prev</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>Next &raquo;</button>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <a href="#">Contact Us</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+</footer>
+
+</body>
+</html>

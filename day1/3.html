@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Website with Multiple Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        section h1, section h2, section h3, section h4, section h5, section h6 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin: 10px 0;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Sample Website</h1>
+    </header>
+
+    <nav>
+       
+        <a href="#home.html">Home</a>
+        <a href="#product.html">Product</a>
+        <a href="#shopping.html">shopping</a>
+        <a href="#payment.html">payment</a>
+        <a href="#product.html">Product category</a>
+    </nav>
+
+    <main>
+        <!-- Section 1 -->
+        <section id="section1">
+            <h1>Introduction</h1>
+            <p>This is the first section, using a <strong>heading 1</strong> tag. It provides an overview of the content.</p>
+            <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>. Donec vel sapien at lorem viverra feugiat.</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section2">
+            <h2>Details</h2>
+            <p>This section uses a <b>information</b> tag. Here's more information presented with a block-level <code>&lt;p&gt;</code> tag:</p>
+            <p><strong>Note:</strong> Always consider readability when creating sections in HTML.</p>
+            <p>This section uses a <sub>information</sub> tag. Here's more information presented with a block-level <code>&lt;p&gt;</code> tag:</p>
+            <p><sup>Note:</sup> Always consider readability when creating sections in HTML.</p>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="section3">
+            <h3>Features</h3>
+            <ul>
+                <li>Feature A: Easy to use</li>
+                <li>Feature B: Responsive design</li>
+                <li>Feature C: Accessibility support</li>
+            </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="section4">
+            <h4>Pricing</h4>
+            <p>The pricing details are as follows:</p>
+            <p><i>Basic Plan:</i> $10/month</p>
+            <p><strong>Premium Plan:</strong> $20/month</p>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="section5">
+            <h5>Testimonials</h5>
+            <blockquote>
+                "This website is fantastic! It has everything I need and more. Highly recommend!"
+                <cite> - Happy User</cite>
+            </blockquote>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="section6">
+            <h6>Conclusion</h6>
+            <p>Thank you for visiting our website. We hope you found the information useful.</p>
+            <p>Stay tuned for updates and new features!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Project. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

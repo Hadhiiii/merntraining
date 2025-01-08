@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images with Different Borders</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center-align all content */
+        }
+
+        /* Image container styling */
+        .image-container {
+            width: 30%;  /* Each container takes 30% width */
+            display: inline-block; /* Display images inline */
+            padding: 10px;  /* Padding for spacing between images */
+            text-align: center; /* Center align image inside div */
+        }
+
+        /* Image styling */
+        .image-container img {
+            width: 100%;  /* Fill the width of the container */
+            height: auto;
+            max-width: 150px;  /* Optional: Max size of images */
+        }
+
+        /* Border styles */
+        #image1 {
+            border: 2px dotted black;
+        }
+
+        #image2 {
+            border: 2px dashed black;
+        }
+
+        #image3 {
+            border: 2px solid black;
+        }
+
+        #image4 {
+            border: 4px double black;
+        }
+
+        #image5 {
+            border: 4px groove black;
+        }
+
+        #image6 {
+            border: 4px ridge black;
+        }
+
+        #image7 {
+            border: 4px inset black;
+        }
+
+        #image8 {
+            border: 4px outset black;
+        }
+
+        #image9 {
+            border: none;
+        }
+
+        #image10 {
+            border: hidden;
+        }
+
+        /* Container for all images (no flex or grid) */
+        .image-row {
+            width: 100%;
+            text-align: center; /* Center align the images within the row */
+            padding: 10px 0; /* Add padding between rows */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- First Row -->
+    <div class="image-row">
+        <div class="image-container" id="image1">
+            <img src="img1.jpeg" alt="Image 1">
+            <p>Dotted Border</p>
+        </div>
+        <div class="image-container" id="image2">
+            <img src="img2.jpeg" alt="Image 2">
+            <p>Dashed Border</p>
+        </div>
+        <div class="image-container" id="image3">
+            <img src="img3.jpeg" alt="Image 3">
+            <p>Solid Border</p>
+        </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="image-row">
+        <div class="image-container" id="image4">
+            <img src="img4.jpeg" alt="Image 4">
+            <p>Double Border</p>
+        </div>
+        <div class="image-container" id="image5">
+            <img src="img5.jpeg" alt="Image 5">
+            <p>Groove Border</p>
+        </div>
+        <div class="image-container" id="image6">
+            <img src="img6.jpeg" alt="Image 6">
+            <p>Ridge Border</p>
+        </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="image-row">
+        <div class="image-container" id="image7">
+            <img src="img7.jpeg" alt="Image 7">
+            <p>Inset Border</p>
+        </div>
+        <div class="image-container" id="image8">
+            <img src="img8.jpeg" alt="Image 8">
+            <p>Outset Border</p>
+        </div>
+        <div class="image-container" id="image9">
+            <img src="img9.jpeg" alt="Image 9">
+            <p>No Border</p>
+        </div>
+    </div>
+</body>
+</html>

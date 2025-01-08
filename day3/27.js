@@ -1,0 +1,1 @@
+//js for where given two strings in which concatenate vowels presents in first strings with only the consoanants present in the second string

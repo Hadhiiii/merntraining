@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Page - Sample Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Main Content Section */
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Product Section Styling */
+        .product {
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            max-width: 40%;
+            padding: 20px;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-details {
+            max-width: 55%;
+            padding: 20px;
+        }
+
+        .product-details h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .product-details p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .features-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #E91E63;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #E91E63;
+            color: white;
+            text-align: center;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .cta-button:hover {
+            background-color: #d81b60;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Product Showcase</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Product Section -->
+        <div class="product">
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="product-image.jpg" alt="Product Image">
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1>Awesome Product Name</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia felis ut augue consequat, non facilisis erat efficitur.</p>
+                <ul class="features-list">
+                    <li>High-quality material</li>
+                    <li>Long-lasting durability</li>
+                    <li>Ergonomically designed</li>
+                    <li>Perfect for daily use</li>
+                </ul>
+
+                <div class="price">$199.99</div>
+                <a href="#" class="cta-button">Buy Now</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

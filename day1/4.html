@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Website with Ads</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main content area styling */
+        main {
+            display: flex;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Aside (Sidebar) for ads */
+        aside {
+            width: 25%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        aside h2 {
+            text-align: center;
+        }
+
+        aside .ad {
+            background-color: #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Main section for primary content */
+        section {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        section h2 {
+            font-size: 24px;
+        }
+
+        section p {
+            font-size: 16px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Sample Website</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#product">product</a>
+        <a href="#shopping">shopping</a>
+        <a href="#productcategory">product category</a>
+        <a href="#payment">payment</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Aside (Sidebar) for Ads -->
+        <aside>
+            <h2>Advertisement</h2>
+            <div class="ad">
+                <h3>Buy Our Product</h3>
+                <p>Special discount on all items! Get 50% off for the next 24 hours.</p>
+            </div>
+            <div class="ad">
+                <h3>Sponsored</h3>
+                <p>Learn to code in 30 days. Sign up for our course now!</p>
+            </div>
+        </aside>
+
+        <!-- Section (Main Content) -->
+        <section>
+            <h2>code4u</h2>
+            <p>This is the primary content area where the main body of the website's content goes.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia felis ut augue consequat, non facilisis erat efficitur. Cras nec fermentum velit.</p>
+
+            <p>In this space, you can add articles, blog posts, or other types of content depending on the purpose of the website.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My mern project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        :root {
+            --strength-width: 0%;
+            --strength-color: lightgray;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #6c63ff;
+            outline: none;
+        }
+
+        input:valid {
+            border-color: #4caf50;
+        }
+
+        input:invalid:not(:focus):not(:placeholder-shown) {
+            border-color: #f44336;
+        }
+
+        .error-message {
+            font-size: 0.8rem;
+            color: #f44336;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        input:invalid + .error-message {
+            display: block;
+        }
+
+        /* Password Strength Bar */
+        .strength-bar {
+            height: 8px;
+            background: lightgray;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .strength-bar::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: var(--strength-width);
+            background: var(--strength-color);
+            transition: width 0.3s ease, background 0.3s ease;
+        }
+
+        /* Password Strength Levels */
+        input[id="password"]:valid[value*="a"]:valid[value*="A"]:valid[value*="1"]:valid[value*="@"] {
+            --strength-width: 100%;
+            --strength-color: #4caf50;
+        }
+
+        input[id="password"]:valid[value*="a"]:valid[value*="A"]:valid[value*="1"]:not([value*="@"]) {
+            --strength-width: 80%;
+            --strength-color: #ffc94d;
+        }
+
+        input[id="password"]:valid[value*="a"]:valid[value*="A"]:not([value*="1"]):not([value*="@"]) {
+            --strength-width: 60%;
+            --strength-color: #ffa94d;
+        }
+
+        input[id="password"]:valid[value*="a"]:not([value*="A"]):not([value*="1"]):not([value*="@"]) {
+            --strength-width: 40%;
+            --strength-color: #ff4d4d;
+        }
+
+        input[id="password"]:not([value*="a"]):not([value*="A"]):not([value*="1"]):not([value*="@"]) {
+            --strength-width: 20%;
+            --strength-color: #f44336;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #6c63ff;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #534ae0;
+        }
+
+        .success-message {
+            display: none;
+            font-size: 0.9rem;
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+
+        input:valid[name="confirm-password"] {
+            + .success-message {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Register</h1>
+    <form>
+        <!-- Name Field -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+        <div class="error-message">Name is required.</div>
+
+        <!-- Email Field -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        <div class="error-message">Please enter a valid email address.</div>
+
+        <!-- Password Field -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password (e.g., Aa1@)" 
+               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" 
+               required>
+        <div class="strength-bar"></div>
+        <div class="error-message">Password must include uppercase, lowercase, number, and special character.</div>
+
+        <!-- Confirm Password Field -->
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+        <div class="error-message">Passwords must match.</div>
+        <div class="success-message">Passwords match!</div>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>

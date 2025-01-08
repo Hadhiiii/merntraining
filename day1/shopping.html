@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Main Content Section */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Product Details Section */
+        .product-details {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .product-image {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-info {
+            flex: 2;
+        }
+
+        .product-info h1 {
+            color: #333;
+            font-size: 28px;
+        }
+
+        .product-info p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .product-info .price {
+            font-size: 22px;
+            color: #E91E63;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .product-info .btn {
+            background-color: #E91E63;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .product-info .btn:hover {
+            background-color: #d81b60;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Product Page</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="product-details">
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="product.jpg" alt="Product Image">
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1>Product Name</h1>
+                <p>This is a description of the product. It highlights features, benefits, and any relevant information that a customer may find helpful. It's usually a good idea to describe what makes the product stand out or why it’s special.</p>
+                <div class="price">$99.99</div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

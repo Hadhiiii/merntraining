@@ -1,0 +1,172 @@
+/* Reset and Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header .branding h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Task Management Panel */
+.task-panel {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.task-panel .task {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.task-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.overdue {
+    color: red;
+    font-style: italic;
+    border-color: red;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #666;
+}
+
+/* Calendar View */
+.calendar-panel {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.calendar {
+    display: flex;
+    gap: 10px;
+}
+
+.day {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.weekday {
+    background-color: #f4f4f4;
+}
+
+.weekend {
+    background-color: #ffecb3;
+}
+
+.current {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Collaboration Section */
+.collaboration-panel {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.chat .message {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+}
+
+.chat .message.alt {
+    background-color: #d4d4d4;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Accessibility and Responsiveness */
+body {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .calendar {
+        flex-wrap: wrap;
+    }
+
+    .day {
+        width: calc(100% / 7 - 10px);
+    }
+}

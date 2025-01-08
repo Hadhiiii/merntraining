@@ -1,0 +1,1 @@
+// to check a given number is armstrong or not

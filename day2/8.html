@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        header input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        /* Sidebar */
+        aside {
+            background-color: #ffffff;
+            padding: 20px;
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            border-right: 1px solid #ddd;
+        }
+
+        aside a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        aside a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            margin-left: 220px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .task-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .task-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .task-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .task-card {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .task-card:hover {
+            background-color: #f9f9f9;
+        }
+
+        .task-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .task-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .task-card button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .task-card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Logo (text-based for simplicity, you can replace it with an image) -->
+        <div class="logo">breakingtasks</div>
+        <input type="text" placeholder="Search tasks...">
+    </header>
+
+    <!-- Sidebar -->
+    <aside>
+        <a href="#">Dashboard</a>
+        <a href="#">My Tasks</a>
+        <a href="#">Team</a>
+        <a href="#">Calendar</a>
+        <a href="#">Settings</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <h2>My Tasks</h2>
+        <div class="task-grid">
+            <!-- Task Cards -->
+            <div class="task-card">
+                <h3>Design Wireframe</h3>
+                <p>Finalize the wireframe for the new project.</p>
+                <button>Edit</button>
+            </div>
+            <div class="task-card">
+                <h3>Team Meeting</h3>
+                <p>Prepare the agenda for the quarterly team meeting.</p>
+                <button>Edit</button>
+            </div>
+            <div class="task-card">
+                <h3>Code Review</h3>
+                <p>Review the latest code submission.</p>
+                <button>Edit</button>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

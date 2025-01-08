@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Category Grid Styling */
+        main {
+            padding: 20px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Category Card Styling */
+        .category-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .category-card h3 {
+            color: #333;
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        .category-card a {
+            text-decoration: none;
+            color: #E91E63;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .category-card a:hover {
+            color: #d81b60;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Product Categories</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Category Grid -->
+        <div class="category-grid">
+            <!-- Category 1 -->
+            <div class="category-card">
+                <img src="category1.jpg" alt="Category 1">
+                <h3>Electronics</h3>
+                <a href="#">View Products</a>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category-card">
+                <img src="category2.jpg" alt="Category 2">
+                <h3>Fashion</h3>
+                <a href="#">View Products</a>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="category-card">
+                <img src="category3.jpg" alt="Category 3">
+                <h3>Home Appliances</h3>
+                <a href="#">View Products</a>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="category-card">
+                <img src="category4.jpg" alt="Category 4">
+                <h3>Books</h3>
+                <a href="#">View Products</a>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="category-card">
+                <img src="category5.jpg" alt="Category 5">
+                <h3>Sports</h3>
+                <a href="#">View Products</a>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="category-card">
+                <img src="category6.jpg" alt="Category 6">
+                <h3>Beauty & Health</h3>
+                <a href="#">View Products</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

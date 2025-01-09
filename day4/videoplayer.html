@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        video {
+            width: 600px;
+            height: 340px;
+            margin: 20px 0;
+            background: black;
+        }
+
+        #controls {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        #slider {
+            width: 600px;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Video Player</h1>
+    <video id="video" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+    <input type="range" id="slider" min="0" max="100" value="0" step="0.1">
+    <div id="controls">
+        <button onclick="skipBackward()">⏪</button>
+        <button id="playPauseButton" onclick="togglePlayPause()">Play</button>
+        <button onclick="skipForward()">⏩</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const playPauseButton = document.getElementById('playPauseButton');
+        const slider = document.getElementById('slider');
+
+        // Update slider range based on video duration
+        video.addEventListener('loadedmetadata', () => {
+            slider.max = video.duration;
+        });
+
+        // Play or Pause the video
+        function togglePlayPause() {
+            if (video.paused || video.ended) {
+                video.play();
+                playPauseButton.innerText = "Pause";
+            } else {
+                video.pause();
+                playPauseButton.innerText = "Play";
+            }
+        }
+
+        // Skip forward
+        function skipForward() {
+            video.currentTime += 5;
+        }
+
+        // Skip backward
+        function skipBackward() {
+            video.currentTime -= 5;
+        }
+
+        // Update the slider as the video plays
+        video.addEventListener('timeupdate', () => {
+            slider.value = video.currentTime;
+        });
+
+        // Seek video when the slider is moved
+        slider.addEventListener('input', () => {
+            video.currentTime = slider.value;
+        });
+    </script>
+</body>
+</html>

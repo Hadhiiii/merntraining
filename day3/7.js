@@ -1,5 +1,15 @@
-//js  to find a perfect square number from first 100 natural number 
+// 2, 22, 222, 2222
 
-//perfect cube and both
-var limit=100;
-for(let i=0;i<100;)
+const limit = 10;
+const char = "2";
+
+var strArray = [];
+for (let i = 1; i <= limit; i++) {
+    let string = "";
+    for (let j = 0; j < i; j++) {
+        string = string + char;
+    }
+    strArray.push(string);
+}
+
+console.log(strArray.join(","))

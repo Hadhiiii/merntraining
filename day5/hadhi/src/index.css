@@ -1,0 +1,109 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e2f; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+/* Quiz container styles */
+.quiz-container {
+  background: #2a2a40; /* Dark container background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  text-align: center;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2rem;
+  color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #dcdcdc;
+}
+
+/* Options container */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Dark option buttons */
+.option-button {
+  padding: 10px;
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #444;
+}
+
+.option-button.selected {
+  background-color: #4caf50; /* Green background for selected */
+  color: #ffffff;
+}
+
+/* Controls section */
+.controls {
+  margin-top: 20px;
+}
+
+.controls p {
+  font-size: 1rem;
+  color: #bbb; /* Lighter text for the timer */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Result container */
+.result-container {
+  text-align: center;
+}
+
+.result-container p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ddd; /* Slightly lighter text for results */
+}
+
+.result-container button {
+  margin-top: 20px;
+  background-color: #28a745;
+}
+
+.result-container button:hover {
+  background-color: #218838;
+}
